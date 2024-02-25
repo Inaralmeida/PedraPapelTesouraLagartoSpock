@@ -1,0 +1,18 @@
+export const theme = {
+  primary: "#0070f3",
+  backroundPrimary: "hsl(214, 47%, 23%)",
+  backroundSecondary: "hsl(237, 49%, 15%)",
+  text: "hsl(229, 25%, 31%)",
+  scoreText: "hsl(229, 64%, 46%)",
+  headerOutline: "hsl(217, 16%, 45%)",
+  scissorsPrimary: "hsl(39, 89%, 49%)",
+  paperPrimary: "hsl(230, 89%, 62%)",
+  rockPrimary: "hsl(349, 70%, 56%)",
+  lizardPrimary: "hsl(261, 73%, 60%)",
+  spockPrimary: "hsl(189, 59%, 53%)",
+  scissorsSecondary: "hsl(40, 84%, 53%)",
+  paperSecondary: " hsl(230, 89%, 65%)",
+  rockSecondary: "hsl(349, 71%, 52%)",
+  lizardSecondary: "hsl(261, 72%, 63%)",
+  spockSecondary: "hsl(189, 58%, 57%)",
+};
