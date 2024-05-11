@@ -2,9 +2,9 @@ import { useContext } from 'react'
 import styled from 'styled-components'
 import { GlobalContext } from '../../Core/Context/GlobalContext'
 import { optionGame } from '../../Core/types/patterns'
-import bgAdvanced from '../../assets/bg/bg-pentagon.svg'
-import bgStarter from '../../assets/bg/bg-triangle.svg'
 import ButtonOption from '../ButtonOption'
+import bgAdvanced from '/bg/bg-pentagon.svg'
+import bgStarter from '/bg/bg-triangle.svg'
 type TOptionsGamingProps = {
   listOption: optionGame[]
   setoptionSelected?: (option: optionGame) => void
