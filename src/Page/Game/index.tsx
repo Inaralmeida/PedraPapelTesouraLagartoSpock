@@ -54,7 +54,11 @@ const Game = () => {
   return (
     <StylesGame>
       <header>
-        <h1>{currentMode.name}</h1>
+        <div>
+          {currentMode.name.map((name: string) => (
+            <h1 key={name}>{name}</h1>
+          ))}
+        </div>
         <div className='panel-score'>
           <p>SCORE</p>
           <h3>{score}</h3>

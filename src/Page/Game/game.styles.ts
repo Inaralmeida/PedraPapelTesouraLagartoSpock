@@ -19,9 +19,11 @@ export const StylesGame = styled.main`
     border: 1px solid ${(props) => props.theme.headerOutline};
     padding: 12px;
     border-radius: 20px;
-    > h1 {
-      width: 10%;
-      font-size: 2rem;
+    div {
+      > h1 {
+        width: 10%;
+        font-size: 3rem;
+      }
     }
     > .panel-score {
       width: fit-content;

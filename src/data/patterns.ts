@@ -2,7 +2,7 @@
 export const modeGameData: any = {
   starter: {
     level: 'Iniciante',
-    name: 'Pedra papel tesoura',
+    name: ['pedra', 'papel', 'tesoura'],
     description: 'O Pedra, papel e tesouro que voce ja conhece.',
     options: [
       {
@@ -41,7 +41,7 @@ export const modeGameData: any = {
   },
   advanced: {
     level: 'Avançado',
-    name: 'Pedra papel tesoura lagarto spock',
+    name: ['pedra', 'papel', 'tesoura', 'lagarto', 'spock'],
     description: 'A brilhante versão do Sheldon',
     options: [
       {
