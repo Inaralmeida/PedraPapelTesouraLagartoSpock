@@ -3,11 +3,13 @@ import { useNavigate } from 'react-router-dom'
 import { GlobalContext } from '../../Core/Context/GlobalContext'
 import { optionGame } from '../../Core/types/patterns'
 import ButtonOption from '../../components/ButtonOption'
+import ModalRules from '../../components/ModalRules'
 import OptionsGaming from '../../components/OptionsGaming'
 import { modeGameData } from '../../data/patterns'
 import { StylePlaying, StylesGame } from './game.styles'
 const Game = () => {
   const navigate = useNavigate()
+  const [rules, setRules] = useState(false)
   const { modeGame, score, handleSetScore } = useContext(GlobalContext)
   const currentMode = modeGameData[modeGame ? modeGame : 'starter']
   const [optionSelected, setoptionSelected] = useState<optionGame>()
@@ -111,9 +113,10 @@ const Game = () => {
         )}
       </main>
       <footer>
-        <button onClick={() => navigate(`/`)}>inicio</button>
-        <button>Regras</button>
+        <button onClick={() => navigate(`/`)}>Tela Inicial</button>
+        <button onClick={() => setRules(true)}>Regras</button>
       </footer>
+      <ModalRules open={rules} onClose={() => setRules(false)} />
     </StylesGame>
   )
 }
