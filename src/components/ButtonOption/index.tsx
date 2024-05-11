@@ -7,6 +7,7 @@ type ButtonOptionProps = {
   win?: boolean
   className?: string
   isLarge?: boolean
+  isSmall?: boolean
 }
 
 type ColorsByOption = { [key: string]: { start: string; end: string } }
@@ -16,7 +17,8 @@ const ButtonOption = ({
   handleClick,
   win,
   className,
-  isLarge = false
+  isLarge = false,
+  isSmall = false
 }: ButtonOptionProps) => {
   const {
     rockPrimary,
@@ -54,9 +56,11 @@ const ButtonOption = ({
   }
   return (
     <StylePing>
-      <div className={`${win ? 'win' : ''} ${isLarge ? 'large' : ''}`}></div>
+      <div
+        className={`${win ? 'win' : ''} ${isLarge ? 'large' : isSmall ? 'small' : ''}`}
+      ></div>
       <StyleButtonOption
-        className={`${className}  ${isLarge ? 'large' : ''}`}
+        className={`${className} ${isLarge ? 'large' : isSmall ? 'small' : ''}`}
         onClick={handleClick}
         startColor={colorsByOption[name].start}
         endColor={colorsByOption[name].end}
@@ -159,6 +163,15 @@ const StyleButtonOption = styled.button<StyleButtonOptionProps>`
         width: 110px;
         height: 110px;
       }
+    }
+  }
+
+  &.small {
+    width: 50px;
+    height: 50px;
+    > .content {
+      width: 40px;
+      height: 40px;
     }
   }
 
