@@ -7,12 +7,12 @@ type GlobalContextProps = {
   handleSetScore?: (score: number) => void
 }
 
-type modeGame = 'starter' | 'advanced'
+type modeGame = 'starter' | 'advanced' | ''
 
 export const GlobalContext = React.createContext<GlobalContextProps>({})
 
 const useProviderGlobalContext = (): GlobalContextProps => {
-  const [modeGame, setModeGame] = useState<modeGame>('starter')
+  const [modeGame, setModeGame] = useState<modeGame>('')
   const [score, setScore] = useState(0)
 
   const handleSetModeGame = (mode: modeGame) => {
@@ -35,6 +35,7 @@ const useProviderGlobalContext = (): GlobalContextProps => {
     localStorage.setItem('score', String(currentScore + score))
     setScore(currentScore + score)
   }
+
   return {
     modeGame,
     handleSetModeGame,
