@@ -53,7 +53,7 @@ h1{
       background-color: ${(props) => props.theme.primary};
     }
     
-    &.btn-start{
+    &.btn-mode-game{
       padding: 15px 20px;
     }
   }

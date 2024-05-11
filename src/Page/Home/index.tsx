@@ -21,21 +21,25 @@ const Home = () => {
         <h2>selecione o modo de jogo</h2>
         <div>
           <button
-            className='btn-start'
+            className={
+              modeGame === 'starter' ? 'active btn-mode-game' : 'btn-mode-game'
+            }
             onClick={() => handleSetModeGame!('starter')}
           >
             Iniciante
           </button>
           <button
-            className='btn-start'
+            className={
+              modeGame === 'advanced' ? 'active btn-mode-game' : 'btn-mode-game'
+            }
             onClick={() => handleSetModeGame!('advanced')}
           >
-            Avancado
+            Avançado
           </button>
         </div>
         {modeGame!.length > 1 && (
           <button className='start' onClick={() => navigate(`/playing`)}>
-            Comecar o Jogo
+            Começar o Jogo
           </button>
         )}
       </section>
