@@ -34,7 +34,7 @@ h1{
     padding: 15px 35px;
     text-transform: uppercase;
     border-radius: 12px;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     background-color: transparent;
     outline: transparent;
     transition: all .5s;
@@ -50,7 +50,7 @@ h1{
      
     }
     &.start{
-      background-color: ${(props) => props.theme.primary};
+      background-color: ${(props) => props.theme.backroundSecondary};
     }
     
     &.btn-mode-game{
