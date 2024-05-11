@@ -16,6 +16,7 @@ h1{
   body, html, #root{
     width: 100%;
     min-height: 100vh;
+    max-height: 100vh;
     background-image: radial-gradient(circle,  ${(props) =>
       props.theme.backroundPrimary} 50%, ${(props) =>
       props.theme.backroundSecondary} 100%); 
@@ -38,11 +39,22 @@ h1{
     outline: transparent;
     transition: all .5s;
 
-    &:hover, &.active{
-      background-color: ${(props) => props.theme.backroundSecondary};
+   
+
+    &:hover, &.active, &.start{
+      background-color: ${(props) => props.theme.backroundPrimary};
       color: #fff;
       border: 3px solid #fff;
       transform: scale(1.05);
+      font-weight: bold;
+     
+    }
+    &.start{
+      background-color: ${(props) => props.theme.primary};
+    }
+    
+    &.btn-start{
+      padding: 15px 20px;
     }
   }
 
