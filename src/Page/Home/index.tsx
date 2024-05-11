@@ -2,7 +2,6 @@ import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { GlobalContext } from '../../Core/Context/GlobalContext'
-import OptionsGaming from '../../components/OptionsGaming'
 import { modeGameData } from '../../data/patterns'
 
 const Home = () => {
@@ -10,32 +9,35 @@ const Home = () => {
   const navigate = useNavigate()
 
   const currentMode = modeGameData[modeGame ? modeGame : 'starter']
-  console.log(currentMode)
   return (
     <StyleHome>
       <header>
-        <h1>{currentMode.name}</h1>
+        {currentMode.name.map((name: string) => (
+          <h1 key={name}>{name}</h1>
+        ))}
       </header>
-
-      <OptionsGaming listOption={currentMode.options} startPage />
 
       <section>
         <h2>selecione o modo de jogo</h2>
         <div>
           <button
+            className='btn-start'
             onClick={() => handleSetModeGame!('starter')}
-            className={modeGame === 'starter' ? 'active' : ''}
           >
             Iniciante
           </button>
           <button
+            className='btn-start'
             onClick={() => handleSetModeGame!('advanced')}
-            className={modeGame === 'advanced' ? 'active' : ''}
           >
             Avancado
           </button>
         </div>
-        <button onClick={() => navigate(`/playing`)}>Comecar o Jogo</button>
+        {modeGame!.length > 1 && (
+          <button className='start' onClick={() => navigate(`/playing`)}>
+            Comecar o Jogo
+          </button>
+        )}
       </section>
     </StyleHome>
   )
@@ -44,7 +46,7 @@ const Home = () => {
 export default Home
 
 const StyleHome = styled.main`
-  height: 100vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -54,15 +56,18 @@ const StyleHome = styled.main`
   max-width: 900px;
 
   > header {
-    width: 100%;
+    width: 50%;
+    margin: 0 auto;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    flex-direction: column;
     border: 1px solid ${(props) => props.theme.headerOutline};
     padding: 12px;
     border-radius: 12px;
     > h1 {
-      font-size: 2rem;
+      font-size: 6.5rem;
+      line-height: 90%;
       text-align: center;
     }
   }
@@ -90,13 +95,14 @@ const StyleHome = styled.main`
   }
 
   @media screen and (max-width: 600px) {
+    height: 90vh;
     max-width: 100%;
     width: 100%;
+    > header {
+      width: fit-content;
+    }
     > section {
       gap: 20px;
-      > div {
-        flex-direction: column;
-      }
     }
   }
 `
