@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import styled from 'styled-components'
-import { GlobalContext } from '../../Core/Context/GlobalContext'
+import { GlobalContext } from '../../Core/Context/context'
 import { optionGame } from '../../Core/types/patterns'
 import ButtonOption from '../ButtonOption'
 import bgAdvanced from '/bg/bg-pentagon.svg'

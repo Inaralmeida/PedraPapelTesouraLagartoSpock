@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
-import { GlobalContext } from '../../Core/Context/GlobalContext'
+import { GlobalContext } from '../../Core/Context/context'
 import { modeGameData } from '../../data/patterns'
 
 const Home = () => {
