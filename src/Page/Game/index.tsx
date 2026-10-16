@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { GlobalContext } from '../../Core/Context/GlobalContext'
+import { GlobalContext } from '../../Core/Context/context'
 import { optionGame } from '../../Core/types/patterns'
 import ButtonOption from '../../components/ButtonOption'
 import ModalRules from '../../components/ModalRules'

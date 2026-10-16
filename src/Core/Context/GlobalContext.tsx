@@ -1,15 +1,5 @@
-import React, { ReactNode, useState } from 'react'
-type GlobalContextProps = {
-  modeGame?: modeGame
-  handleSetModeGame?: (mode: modeGame) => void
-  score?: number
-  handleGetScore?: () => number
-  handleSetScore?: (score: number) => void
-}
-
-type modeGame = 'starter' | 'advanced'
-
-export const GlobalContext = React.createContext<GlobalContextProps>({})
+import { ReactNode, useState } from 'react'
+import { GlobalContext, GlobalContextProps, modeGame } from './context'
 
 const useProviderGlobalContext = (): GlobalContextProps => {
   const [modeGame, setModeGame] = useState<modeGame>('starter')

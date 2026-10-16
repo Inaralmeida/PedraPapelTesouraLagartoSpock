@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { GlobalContext } from '../../Core/Context/GlobalContext'
+import { GlobalContext } from '../../Core/Context/context'
 import { getPlayer } from '../../Core/playerIdentity'
 import { ensureAnonymousSession } from '../../services/supabase'
 export default function MultiplayerLobby() {

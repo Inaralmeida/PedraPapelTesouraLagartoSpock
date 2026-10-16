@@ -1,6 +1,6 @@
 import { useCallback, useContext, useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { GlobalContext } from '../../Core/Context/GlobalContext'
+import { GlobalContext } from '../../Core/Context/context'
 import { getPlayer } from '../../Core/playerIdentity'
 import { modeGameData } from '../../data/patterns'
 import { ensureAnonymousSession } from '../../services/supabase'
