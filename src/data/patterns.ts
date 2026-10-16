@@ -115,7 +115,7 @@ export const modeGameData: {
         tesoura: 'Empate'
       },
       lagarto: {
-        pedra: 'Vitoria',
+        pedra: 'Derrota',
         spock: 'Vitoria',
         papel: 'Derrota',
         tesoura: 'Derrota',
